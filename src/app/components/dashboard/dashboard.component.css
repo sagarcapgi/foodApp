@@ -1,0 +1,44 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.dashboard{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    text-align: center;
+    font-family: cursive;
+
+}
+.left-menuBar{
+    width: 19%;
+    height: 100vh;
+    background: pink;
+    display: flex;
+    flex-direction: column;
+    
+
+}
+.left-menuBar >*{
+    margin: 5px;
+
+}
+.content-box{
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    overflow:scroll;
+    /* border: 1px solid black; */
+   
+
+}
+.content-box >*{
+    margin: 4px;
+    opacity: .5;
+    cursor: pointer;
+}
+.content-box >*:hover{
+    
+    opacity: 1;
+}

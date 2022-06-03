@@ -1,0 +1,74 @@
+<div class="main-container">
+        <div class="container">
+            <div class="container-box">
+                <img src="../../../assets/images/logo1.png" alt="my-image">
+                <img style="width: 90%;" src="../../../assets/images/logo2.png" alt="my-image">
+            </div>
+
+            <div class="container-box">
+                <h2 *ngIf="status" id="breathing-button">SIGN UP</h2>
+                <h2  *ngIf="!status" id="breathing-button">LOGIN</h2>
+            <p *ngIf="status" >Sign up to try our new Services</p>
+            <p *ngIf="!status">Login to try our new Services</p>
+            <div>
+                <div [ngClass]="status ? 'input-box1' : 'input-box'" *ngIf="status">
+                    <label for="typeahead-name">Enter your Full Name ⤵ </label>
+                    <input [(ngModel)]="form.Name" [value]="form.Name" id="typeahead-name" type="text" class="form-control" required="true" />
+    
+                    <label for="typeahead-email">Enter your Email Id 📧 </label>
+                    <input [(ngModel)]="form.Email" [value]="form.Email" id="typeahead-email" type="email" class="form-control" required="true"/>
+    
+                    <label for="typeahead-password">Enter your Password 🔐 </label>
+                    <input [(ngModel)]="form.Password" [value]="form.Password" id="typeahead-password" type="password" class="form-control" required="true"/>
+    
+                    <label for="typeahead-basic">Re-enter Your Password 🔐 </label>
+                    <input [(ngModel)]="form.PassCode"  [value]="form.PassCode" id="typeahead-basic" type="password" class="form-control" required="true"/>
+
+                    <div  id="button-box">
+                        <!-- <button>SuBmIt</button> -->
+                        <a  (click)="onSubmit()">
+                            
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            S U B M I T
+                          </a>
+                    </div>
+                
+                </div>
+                <div *ngIf="!status" [ngClass]="status ? 'input-box' : 'input-box1'" >
+                    <label for="typeahead-name">Enter your Email Id ⤵ </label>
+                    <input [(ngModel)]="loginData.email" [value]="loginData.email" id="typeahead-name" type="email" class="form-control" />
+
+                    <label for="typeahead-name">Enter your Password ⤵ </label>
+                    <input [(ngModel)]="loginData.password" [value]="loginData.password" id="typeahead-name" type="password" class="form-control" />
+                    <div id="button-box">
+                        <!-- <button>SuBmIt</button> -->
+                        <a  (click)="onLogin()">
+                            
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            L O G I N
+                          </a>
+                    </div>
+                
+                </div>
+                
+                        
+                        <div>
+                            <button (click)="OnToggle()">
+                                <p *ngIf="status">Already have Accout!!! Click To Login😎😎</p>
+                                <p *ngIf="!status">Haven't Accout Click to SIGNUP😁😁</p>
+                                
+                                
+                            </button>
+                        </div>
+            </div>
+            
+            </div>
+            
+        </div>
+</div>

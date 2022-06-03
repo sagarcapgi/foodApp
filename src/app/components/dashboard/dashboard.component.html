@@ -1,0 +1,18 @@
+<div class="dashboard">
+        <div class="left-menuBar">
+            <h2 >FILTERS</h2>
+            <button>VEG ONLY</button>
+            <button>NON-VEG ONLY</button>
+            <hr>
+            <h2>GOTO CART</h2>
+            <button>CART</button>
+            <hr>
+            <h2>PAYMENT</h2>
+            <button>PAY</button>
+            <img style="height: 250px;" src="assets/images/logo3.png" alt="">
+        </div>
+
+        <div  class="content-box">
+            <app-foodcard *ngFor="let item of value"></app-foodcard>
+        </div>
+</div>
